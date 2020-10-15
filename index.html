@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 禁止缩放 -->
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <style>
+    body {
+      font-family: Hiragino Sans GB, MicroSoft YaHei;
+    }
+    .taiji {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 500px) {
+      #html-demo {
+        height: 50vh;
+        overflow: auto;
+      }
+
+      #div1Wrapper {
+        position: relative;
+        height: 50vh;
+      }
+
+      #div1Wrapper .taiji {
+        position: relative;
+        bottom: 0;
+      }
+    }
+  </style>
+  <body>
+    <style id="style"></style>
+    <div class="html-demo"></div>
+    <div id="div1Wrapper">
+      <div class="taiji"></div>
+    </div>
+  </body>
+  <!-- 备注 
+  div一黑一白 是用线性渐变制作而成  里面有两个小球 圆形是用伪元素      然后将小球的颜色调成镜像渐变就变成 白里面有黑,黑里面有白 就制作而成了  -->
+  <script src="./main.js"></script>
+</html>
